@@ -2,6 +2,7 @@ var express = require('express');
 const jwt = require('jsonwebtoken');
 var router = express.Router();
 require('dotenv').config();
+const isValidToken = require('../middleware/isValidToken');
 
 
 /* GET home page. */
@@ -19,9 +20,14 @@ router.get('/register', function(req, res, next) {
   res.render('register');
 });
 
+/* CONFIRMATION page */
+router.get('/confirmation', function(req, res, next) {
+  res.render('confirmation', { title: 'Pocket Sanwich!' });
+});
+
 /* PROFILE page */
-router.get('/profile', function(req, res, next) {
-  res.render('profile', { name: 'Profile Page' });
+router.get('/profile', isValidToken, function(req, res, next) {
+  res.render('profile', { name: 'My Profile Page' });
 });
 
 module.exports = router;
