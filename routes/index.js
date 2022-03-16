@@ -7,10 +7,23 @@ const { User } = require("../models");
 const isValidToken = require('../middleware/isValidToken');
 
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Pocket Sandwich' });
 });
+
+// Create a new user
+router.post('/user', async (req, res) => {
+  const { email, password } = req.body;
+  const newUser = await User.create({
+    email,
+    password
+  })
+  res.json({
+    id: newUser.id,
+  })
+})
 
 /* LOGIN page */
 router.get('/login', function(req, res, next) {
