@@ -2,7 +2,6 @@ var express = require('express');
 const jwt = require('jsonwebtoken');
 var router = express.Router();
 require('dotenv').config();
-
 const Sequelize = require("sequelize");
 const { User } = require("../models");
 const isValidToken = require('../middleware/isValidToken');
@@ -38,11 +37,11 @@ router.get('/register', function(req, res, next) {
 
 /* CONFIRMATION page */
 router.get('/confirmation', function(req, res, next) {
-  res.render('confirmation', { title: 'Pocket Sanwich!' });
+  res.render('confirmation', { title: 'Pocket Sandwich!' });
 });
 
 /* PROFILE page */
-router.get('/profile', isValidToken, function(req, res, next) {
+router.get('/profile/:id', isValidToken, function(req, res, next) {
   res.render('profile', { name: 'My Profile Page' });
 });
 
