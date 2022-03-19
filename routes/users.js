@@ -21,7 +21,6 @@ router.post('/register', async (req, res) => {
     email: email,
     password: hash,
   });
-  res.redirect(`/confirmation`);
 });
 
 /* USER login */
@@ -36,10 +35,7 @@ router.post('/login', async (req, res) => {
 
   if (user){
 // takes our user input password from req.body, uses bcrypt to hash it and checks that that hash is the same as the already hashed password in our DB
-    console.log(password);
-    console.log(user.password);
     const comparePass = bcrypt.compareSync(password, user.password)
-    console.log(comparePass);
     if (comparePass === true) {
       const token = jwt.sign(
         {
