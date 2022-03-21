@@ -10,12 +10,14 @@
     
 
    
-    <form action="/restaurant" method="POST">
+    <form action="/restaurants" method="POST">
 
         <input id="zipcode" name="zipcode" placeholder="Zipcode" required>
         <input id="type_of_food" name="type_of_food" placeholder="Type of Food" required>
         <button id="submit">Search</button>
     </form>
-    <!-- <%- include('partials/results.ejs') %> -->
+    <% if (listOfRestaurants.length > 0) { %>
+    <%- include('partials/results'); %>
+    <% }; %>
 </body>
 </html> 
