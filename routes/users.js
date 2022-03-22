@@ -21,6 +21,10 @@ router.post('/register', async (req, res) => {
     email: email,
     password: hash,
   });
+
+  if (user){ 
+    res.redirect('/confirmation')
+  }
 });
 
 /* USER login */
@@ -30,7 +34,7 @@ router.post('/login', async (req, res) => {
   const user = await User.findOne({
     where: {
       email: email
-    }
+    } 
   });
 
   if (user){

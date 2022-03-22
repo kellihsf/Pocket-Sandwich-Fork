@@ -1,4 +1,23 @@
-<div>My Search Results</div>
+<h1>Search Results:</h1>
+
+<div class="container">
 <% listOfRestaurants.forEach((restaurant) => { %>
-<p><%= restaurant.name %></p>
+  <div>  <p><%= restaurant.name %></p>
+    <img class="image" src="<%= restaurant.image_url %>" alt="Img goes here"></img>
+    <p><%= restaurant.location["display_address"] %></p>
+    <p><a href="<%= restaurant.url %>" class="btn btn-info" role="button">Go to Restaurant Website</a></p>
+    </div>
 <% }); %>
+</div>
+
+<style>
+    .image {
+        max-height: 150px;
+        max-width: 150px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+</style>
