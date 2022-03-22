@@ -5,7 +5,6 @@ require('dotenv').config();
 const axios = require('axios');
 const axiosHeader = process.env.AXIOS_HEADER;
 
-
 /* SEARCH page */
 router.get('/', function(req, res, next) {
   console.log("in here")
