@@ -16,14 +16,20 @@
     <form action="/restaurants" method="POST">
       <input id="zipcode" name="zipcode" placeholder="Zipcode" required />
       <input
-        id="type_of_food"
-        name="type_of_food"
-        placeholder="Type of Food"
-        required
+      id="type_of_food"
+      name="type_of_food"
+      placeholder="Type of Food"
+      required
       />
-      <button id="submit">Search</button>
+      <button id="submit">Search</button><br>
+      <br>
+      <input type="checkbox" id="vegan" name="vegan" value="Vegan">
+      <label for="vegan"> I am vegan</label><br>
+      <input type="checkbox" id="vegetarian" name="vegetarian" value="Vegetarian">
+      <label for="vegetarian"> I am vegetarian</label><br>
     </form>
-    <% if (listOfRestaurants.length > 0) { %> <%- include('partials/results');
-    %> <% }; %>
+    <% if (listOfRestaurants.length > 0) { %> 
+      <%- include('partials/results');%> 
+      <% }; %>
   </body>
 </html>
