@@ -7,8 +7,8 @@
     <title>Confirmation Page</title>
 </head>
 <body>
-    <h1>Welcome to <%= title %></h1>
-    <a href="/profile/:id"><button>PROFILE</button></a>
+    <h1>Welcome to <%= title %> <%= user.id %></h1>
+    <a href="/profile/<%= user.id %>"><button>PROFILE</button></a>
     
 </body>
 </html>
