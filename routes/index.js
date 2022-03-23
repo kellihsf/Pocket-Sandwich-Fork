@@ -45,4 +45,10 @@ router.get('/profile/:id', isValidToken, function(req, res, next) {
   res.render('profile', { name: 'My Profile Page' });
 });
 
+/* USER logout */
+router.get('/signout', function(req, res) {
+  res.clearCookie('jwt').send();
+  res.redirect('/');
+
+});
 module.exports = router;
