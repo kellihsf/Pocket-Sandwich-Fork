@@ -18,11 +18,11 @@ router.post('/', function(req, res, next) {
   
   
   // This gets the zipcode and type of food from the body object
-  const {zipcode, type_of_food} = req.body;
+  const {zipcode, type_of_food, vegan} = req.body;
   
   var config = {
     method: 'get',
-    url: `https://api.yelp.com/v3/businesses/search?location=${zipcode}&categories=${type_of_food}`,
+    url: `https://api.yelp.com/v3/businesses/search?location=${zipcode}&categories=${type_of_food}&alias=${vegan}`,
     headers: { 
       'Authorization': `${axiosHeader}`
 

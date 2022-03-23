@@ -23,7 +23,7 @@ router.post('/register', async (req, res) => {
   });
 
   if (user){ 
-    res.redirect('/confirmation')
+    res.redirect(`/confirmation/${user.id}`)
   }
 });
 
