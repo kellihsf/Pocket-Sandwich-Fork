@@ -10,7 +10,7 @@
 
 <div class="container">
 <% listOfRestaurants.forEach((restaurant) => { %>
-  <div>  <p><%= restaurant.name %></p>
+  <div class="card text-white bg-success mb-5" style="width: 18rem;">  <p><%= restaurant.name %></p>
     <img class="image" src="<%= restaurant.image_url %>" alt="Img goes here"></img>
     <p><%= restaurant.location["display_address"] %></p>
     <p><a href="<%= restaurant.url %>" class="btn btn-info" role="button">Go to  <%= restaurant.name %>'s Website</a></p>
@@ -20,12 +20,13 @@
 
 <style>
     .image {
-        max-height: 150px;
+        height: 150px;
         max-width: auto;
     }
 
     p {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        
     }
 
     .container {
