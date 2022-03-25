@@ -10,6 +10,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
     crossorigin="anonymous"
   />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light">
     <title>Profile Page</title>
 </head>
 <body><center>
@@ -24,7 +25,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Search</a>
+              <a class="nav-link" href="/restaurants">Search</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Logout</a>
@@ -33,6 +34,12 @@
           </ul>
         </div>
       </nav>
+      <div class="col-md-6"></div><center>
+        <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(206, 189, 189, 0.6) 0%,rgba(0,0,0,0.6) 100%), url(/stylesheets/images/restaurantpic1.png)">
+         
+          <h1 class="display-4"><img src = "/stylesheets/images/logo.png" height="15%" width="15%"></h1>
+        
+            </div>
     <h1>My Profile Page</h1>
 
     <h3>User info</h3>
@@ -45,15 +52,17 @@
       <br>
       <input type="email" id="email" name="email" placeholder="email address">
       <br>
-      <input type="text" id="favoriteFood" placeholder="favorite food"><br><br>
+      <br>
       <button id="submit">Save</button>
     </form>
-    <br>
+    <br><br>
     <a href="/restaurants">
       <button>Search for Restaurants</button>
     </a>
-    <a href="/">
+    <a href="/"><br><br>
       <button>Logout</button>
     </a></center>
+    <style>h1 {font-family: 'Shadows Into Light'}</style>
+    
 </body>
 </html>
