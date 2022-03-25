@@ -36,7 +36,7 @@
   <div class="card text-white bg-success mb-5 " style="width: 18rem;">  <p><%= restaurant.name %></p>
     <img class="image" src="<%= restaurant.image_url %>" alt="Img goes here"></img>
     <p><%= restaurant.location["display_address"] %></p>
-    <p><a href="<%= restaurant.url %>" class="btn btn-info" role="button">Go to  <%= restaurant.name %>'s Website</a></p>
+    <p><a href="<%= restaurant.url %>" class="btn btn-info" target="_blank" role="button">Go to  <%= restaurant.name %>'s Website</a></p>
     </div>
 <% }); %>
 
