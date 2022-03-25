@@ -36,14 +36,13 @@
       <input id="vegan" name="vegan" placeholder="Food Preference" required />
   
       <button id="submit">Search</button><br>
+      
       <br>
-      <input type="checkbox" id="vegan" name="vegan" value="Vegan">
-      <label for="vegan"> I am vegan</label><br>
-      <input type="checkbox" id="vegetarian" name="vegetarian" value="Vegetarian">
-      <label for="vegetarian"> I am vegetarian</label><br>
-    </form><br><br><br>
+     <br>
+    </form><br>
+   <br><br><br>
     <% if (listOfRestaurants.length > 0) { %> 
       <%- include('partials/results');%> 
       <% }; %>
-    </center></body>
+    </center> </body>
 </html>
