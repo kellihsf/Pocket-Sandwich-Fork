@@ -28,4 +28,4 @@ Contributors:
 
 - Darian Magee
 - Jeffrey Sam
-- Kelli Stone/@kellihsf
+- Kelli Stone
