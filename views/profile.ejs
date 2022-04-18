@@ -14,7 +14,7 @@
     <title>Profile Page</title>
 </head>
 <body><center>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Pocket Sandwich</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
             </li>
           </ul>
         </div>
-      </nav>
+      </nav> -->
       <div class="col-md-6"></div><center>
         <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(206, 189, 189, 0.6) 0%,rgba(0,0,0,0.6) 100%), url(/stylesheets/images/restaurantpic1.png)">
          
@@ -41,28 +41,33 @@
         
             </div>
     <h1>My Profile Page</h1>
-
-    <h3>User info</h3>
-    <p>User email: <%= user.email %></p>
+            <br>
+    <h5 style= "color: rgb(66, 14, 14)">User email: <%= user.email %></h5>
 
     <form method="post" action="/profile/<%= user.id %>/edit">
       <input type="text" id="myName" placeholder="First Name">
       <br>
       <input type="text" id="myName" placeholder="Last Name">
       <br>
-      <input type="email" id="email" name="email" placeholder="email address">
+      <input type="email" id="email" name="email" placeholder="Email address">
       <br>
       <br>
       <button id="submit">Save</button>
     </form>
-    <br><br>
+    <br>
     <a href="/restaurants">
       <button>Search for Restaurants</button>
     </a>
     <a href="/"><br><br>
       <button>Logout</button>
     </a></center>
-    <style>h1 {font-family: 'Shadows Into Light'}</style>
+    <style>
+  h1 {font-family: 'Shadows Into Light'}
+  body {
+  background: rgb(98,21,2);
+  background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, rgba(252,176,69,1) 100%);
+      }
+    </style>
     
 </body>
 </html>

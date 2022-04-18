@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Confirmation Page</title>
-</head>
-<body><center>
-    <h1>Welcome to <br><img src = "/stylesheets/images/logo.png" height="15%" width="15%"> </h1>
-    <a href="/profile/<%= user.id %>"><button>PROFILE</button></a>
+  </head>
+  <body>
+    <center>
+      <h1>
+        Welcome to <br /><img
+          src="/stylesheets/images/logo.png"
+          height="15%"
+          width="15%"
+        />
+      </h1>
+      <a href="/profile/<%= user.id %>"><button>Profile Page</button></a>
     </center>
-</body>
+
+    <style>
+       body {
+        background: rgb(98,21,2);
+background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, rgba(252,176,69,1) 100%);
+      }
+      .image {
+        height: 150px;
+        max-width: auto;
+      }
+
+      p {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        font-family: "Shadows Into Light";
+        color: white;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        margin-right: 25px;
+        margin-bottom: 25px;
+        align-items: center;
+      }
+    </style>
+  </body>
 </html>

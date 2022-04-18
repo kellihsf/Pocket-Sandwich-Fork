@@ -16,51 +16,76 @@
   </head>
   <body>
 
+  <h1 style="font-weight: 200">Search Results:</h1>
+  <div class="results-container">
+    <div class="result-row row">
 
+      <% listOfRestaurants.forEach((restaurant) => { %>
+        <div class="result-card-container col-lg-3 col-md-4 col-sm-6">
+          <div class="result-card card text-white bg-secondary">  
+            <p><%= restaurant.name %></p>
+            <img class="image" src="<%= restaurant.image_url %>" alt="Restaurant Image"></img>
+            <p><%= restaurant.location["display_address"] %></p>
+            <div class="link-container">
+              <a href="<%= restaurant.url %>" class="link btn btn-light" target="_blank" role="button">Go to  <%= restaurant.name %>'s Website</a></div>
+          </div>
+        </div>
+      <% }); %>
 
-
-
-
-<h1>Search Results:</h1>
-
-<link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/public/stylesheets/style.css">
-
-    <div class="container">
-<% listOfRestaurants.forEach((restaurant) => { %>
-  <div class="card text-white bg-success mb-5 " style="width: 18rem;">  <p><%= restaurant.name %></p>
-    <img class="image" src="<%= restaurant.image_url %>" alt="Img goes here"></img>
-    <p><%= restaurant.location["display_address"] %></p>
-    <p><a href="<%= restaurant.url %>" class="btn btn-info" target="_blank" role="button">Go to  <%= restaurant.name %>'s Website</a></p>
-    </div>
-<% }); %>
-
-
-
+  </div>
+</div>
+</body>
 
 <style>
-    .image {
-        height: 150px;
-        max-width: auto;
-    }
 
-    p {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        
-    }
-   h1 {font-family: 'Shadows Into Light'}
+/* body { background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+} */
 
-     .container {
-        display: grid;
-        grid-template-columns: repeat(3, 2fr);
-        margin-right: 25px;
-        margin-bottom: 25px;
-        align-items: center;
-       
-    } 
+.image {
+  height: 150px;
+  max-width: auto;
+}
+
+.link-container {
+  position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.link {
+  margin-bottom: 10px;
+}
+
+.result-card-container {
+  /* margin: 10px; */
+  padding: 10px;
+  max-width: 313px;
+  height: 350px;
+}
+
+.result-card {
+  height: 100%
+}
+
+.result-row {
+  padding: 20px;
+}
+
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  
+h1 {font-family: 'Shadows Into Light'; color: white; }
+
+.results-container {
+  width: 100%;
+} 
+
 </style>

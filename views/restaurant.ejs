@@ -11,6 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light">
     <link rel="stylesheet" href="/public/stylesheets/style.css">
   </head>
   <body>
@@ -19,17 +20,17 @@
 <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(206, 189, 189, 0.6) 0%,rgba(0,0,0,0.6) 100%), url(/stylesheets/images/restaurantpic1.png)">
   <div class="container">
   <h1 class="display-4"><img src = "/stylesheets/images/logo.png" height="15%" width="15%"></h1>
-  <p class="lead">Find the best restaurants around the world with Pocket Sandwich.</p>
+  <p class="lead">Find the best restaurants around the world with Pocket Sandwich! </p>
+  <button>Go to Profile</button>
     </div>
-<!-- /.container   -->
 </div>
   
 </div>
 
 </div>
 
-
-    <h1>Search for a restaurant near you:</h1>
+    <h1 style="color: white; font-family: Shadows Into Light ">Search for a restaurant near you:</h1>
+    <br>
     <form action="/restaurants" method="POST">
       <input id="zipcode" name="zipcode" placeholder="Zipcode" required />
       <input id="type_of_food" name="type_of_food" placeholder="Type of Food" required/>
@@ -45,4 +46,36 @@
       <%- include('partials/results');%> 
       <% }; %>
     </center> </body>
+
+    <style>
+      body { background:
+      radial-gradient(black 15%, transparent 16%) 0 0,
+      radial-gradient(black 15%, transparent 16%) 8px 8px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+      background-color:#282828;
+      background-size:16px 16px;
+      }
+  .image {
+    height: 150px;
+    max-width: auto;
+    }
+      
+  p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;          
+    }
+  h1 {font-family: 'Shadows Into Light'; 
+     color: white;   
+      }
+      
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin-right: 25px;
+    margin-bottom: 25px;
+    align-items: center;}
+    
+  
+
+    </style>
 </html>
