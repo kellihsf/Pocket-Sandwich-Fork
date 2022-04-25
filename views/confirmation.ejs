@@ -4,38 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light">
     <title>Confirmation Page</title>
   </head>
-  <body>
-    <center>
-      <h1>
-        Welcome to <br /><img
-          src="/stylesheets/images/logo.png"
-          height="15%"
-          width="15%"
-        />
-      </h1>
-      <a href="/profile/<%= user.id %>"><button>Profile Page</button></a>
-    </center>
+  <body>    
+    <h1>Welcome to Pocket Sandwich! </h1>  
+      <img class="logo" src="/stylesheets/images/PSLogosmall.png" height="auto" width="auto">
+      <a href="/profile/<%= user.id %>"><button class="profile-button">Profile Page</button></a>
 
     <style>
        body {
         background: rgb(98,21,2);
-background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, rgba(252,176,69,1) 100%);
+        background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, rgba(252,176,69,1) 100%);
       }
-      .image {
-        height: 150px;
-        max-width: auto;
+    
+      .logo {
+        border-radius: 3em;
+        margin: 0 auto;
+        display: block;
       }
 
-      p {
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      }
-      h1 {
-        font-family: "Shadows Into Light";
-        color: white;
-      }
 
       .container {
         display: grid;
@@ -43,6 +31,19 @@ background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, rg
         margin-right: 25px;
         margin-bottom: 25px;
         align-items: center;
+      }
+
+      .profile-button {
+        margin: 0 auto;
+        display: block;
+        border: 2px solid #eda489;
+        border-radius: 1em;
+        margin-top: 30px
+      }
+
+      h1 { 
+        font-family: 'Shadows Into Light';
+        color: white;
       }
     </style>
   </body>
