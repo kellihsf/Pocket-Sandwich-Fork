@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light">
     <title>Register Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <center>
-    <img src = "/stylesheets/images/logo.png" height="20%" width="20%">
-    <h1> Register with us to have the best experience.</h1>
+    
+        <img class="logo" src="/stylesheets/images/PSLogosmall.png" height="auto" width="auto" border-radius="1em">
+    <h1> Register for Pocket Sandwich here!</h1>
     <form action="/users/register" method="POST">
-        <label>
+        <label class="label">
             Email:
             <Input type="email" name="email">
         </label>
@@ -20,16 +21,35 @@
             Password:
             <Input type="password" name="password">
         </label>
-        <button type="submit">REGISTER</button>
+        
+        <button class="register-button" type="submit">REGISTER</button>
     </form>
     <style>
     body {
         background: rgb(98,21,2); background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, 
         rgba(252,176,69,1) 100%);
+        }
+
+      h1 { 
+        font-family: 'Shadows Into Light';
+        color: white;
       }
-      h1{ 
-        font-family: 'Shadows Into Light'
+
+      .logo {
+        border-radius: 3em;
+        margin: 0 auto;
+        display: block;
       }
+      
+      .register-button {
+        margin: 0 auto;
+        display: block;
+        border: 2px solid #333333;
+        border-radius: 1em;
+        margin-top: 30px
+      }
+
+
     </style>
-</body></center>
+</body>
 </html>
