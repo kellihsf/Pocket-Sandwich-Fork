@@ -12,7 +12,7 @@ enter a type of cuisine and any dietary restrictions such as Vegan, Vegetarian, 
   
 The results pages features all of the restaurants that fit the search criteria, with an image and a link to the restaurant's Yelp page.
 ``` 
-[Click here to visit Pocket Sandwich](https://pocket-sandwiches-stone.herokuapp.com/) 👩🏻‍💻
+[Click here to visit Pocket Sandwich](https://pocket-sandwich-fork.herokuapp.com/) 👩🏻‍💻
 
 
 <hr />
