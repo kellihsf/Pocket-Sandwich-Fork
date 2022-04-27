@@ -17,23 +17,19 @@
   <body>
     
 <div class="col-md-6"></div><center>
-<div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(206, 189, 189, 0.6) 0%,rgba(0,0,0,0.6) 100%), url(/stylesheets/images/restaurantpic1.png)">
   <div class="container">
-  <h1 class="display-4"><img src = "/stylesheets/images/logo.png" height="15%" width="15%"></h1>
-  <p class="lead">Find the best restaurants around the world with Pocket Sandwich! </p>
-  <button>Go to Profile</button>
+    
+  <!-- <button class="profile-button" href="/profile/:id">Go to Profile</button> -->
     </div>
 </div>
-  
 </div>
-
 </div>
-
-    <h1 style="color: white; font-family: Shadows Into Light ">Search for a restaurant near you:</h1>
+<img class="logo" src="/stylesheets/images/PSLogosmall.png" height="auto" width="auto" border-radius="1em">
+    <h1>Search for a restaurant near you:</h1>
     <br>
     <form action="/restaurants" method="POST">
       <input id="zipcode" name="zipcode" placeholder="Zipcode" required />
-      <input id="type_of_food" name="type_of_food" placeholder="Type of Food" required/>
+      <input id="type_of_food" name="type_of_food" placeholder="Cuisine" required/>
       <input id="vegan" name="vegan" placeholder="Food Preference" required />
   
       <button id="submit">Search</button><br>
@@ -48,7 +44,8 @@
     </center> </body>
 
     <style>
-      body { background:
+      body { 
+      background:
       radial-gradient(black 15%, transparent 16%) 0 0,
       radial-gradient(black 15%, transparent 16%) 8px 8px,
       radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
@@ -56,6 +53,7 @@
       background-color:#282828;
       background-size:16px 16px;
       }
+
   .image {
     height: 150px;
     max-width: auto;
@@ -64,9 +62,19 @@
   p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;          
     }
+    
   h1 {font-family: 'Shadows Into Light'; 
      color: white;   
       }
+      
+
+  .logo {
+        border-radius: 3em;
+        margin: 0 auto;
+        display: block;
+        max-width: 150px;
+        max-height: 150px
+  }      
       
   .container {
     display: grid;
@@ -75,7 +83,9 @@
     margin-bottom: 25px;
     align-items: center;}
     
-  
+  .profile-button {
+    align-items: center;
+  }
 
     </style>
 </html>

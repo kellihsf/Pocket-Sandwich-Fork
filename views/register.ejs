@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light|Radio Canada">
     <title>Register Page</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
     
         <img class="logo" src="/stylesheets/images/PSLogosmall.png" height="auto" width="auto" border-radius="1em">
-    <h1> Register for Pocket Sandwich here!</h1>
+    <h1> Register a new account for Pocket Sandwich</h1>
+    <div class="form-center">
     <form action="/users/register" method="POST">
         <label class="label">
             Email:
@@ -24,32 +25,42 @@
         
         <button class="register-button" type="submit">REGISTER</button>
     </form>
+  </div>
+
     <style>
-    body {
-        background: rgb(98,21,2); background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, 
-        rgba(252,176,69,1) 100%);
-        }
+  body {
+    background: rgb(51,225,227);
+     background: radial-gradient(circle, rgba(51,225,227,1) 0%, rgb(232 253 150) 100%);
+     }
 
-      h1 { 
-        font-family: 'Shadows Into Light';
-        color: white;
-      }
+  h1 { 
+    font-family: 'Shadows Into Light';
+    color: white;
+    text-align: center;
+    }
 
-      .logo {
-        border-radius: 3em;
-        margin: 0 auto;
-        display: block;
-      }
+  .logo {
+    border-radius: 3em;
+    margin: 0 auto;
+    display: block;
+  }
       
-      .register-button {
-        margin: 0 auto;
-        display: block;
-        border: 2px solid #333333;
-        border-radius: 1em;
-        margin-top: 30px
-      }
+  .register-button {
+    margin: 0 auto;
+    display: block;
+    border: 2px solid #333333;
+    border-radius: 1em;
+    margin-top: 30px
+  }
 
+  label {
+    font-family: 'Radio Canada';
+    }  
 
+  .form-center {
+   display:flex;
+    justify-content: center;
+}
     </style>
 </body>
 </html>

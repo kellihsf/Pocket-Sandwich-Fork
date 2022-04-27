@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shadows Into Light|Radio Canada">
     <title>Confirmation Page</title>
   </head>
   <body>    
-    <h1>Welcome to Pocket Sandwich! </h1>  
+    <h1>Success! You have registered an account on Pocket Sandwich</h1>  
       <img class="logo" src="/stylesheets/images/PSLogosmall.png" height="auto" width="auto">
-      <a href="/profile/<%= user.id %>"><button class="profile-button">Profile Page</button></a>
+      <a href="/profile/<%= user.id %>"><button class="profile-button">Go to Profile Page</button></a>
 
     <style>
        body {
-        background: rgb(98,21,2);
-        background: linear-gradient(90deg, rgba(98,21,2,1) 0%, rgba(149,17,17,1) 16%, rgba(252,176,69,1) 100%);
+        background: rgb(51,225,227);
+        background: radial-gradient(circle, rgba(51,225,227,1) 0%, rgb(232 253 150) 100%);
       }
     
       .logo {
@@ -38,12 +38,14 @@
         display: block;
         border: 2px solid #eda489;
         border-radius: 1em;
-        margin-top: 30px
+        margin-top: 30px;
+        font-family: 'Radio Canada'
       }
 
       h1 { 
         font-family: 'Shadows Into Light';
         color: white;
+        text-align: center;
       }
     </style>
   </body>
