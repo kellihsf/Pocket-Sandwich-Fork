@@ -22,7 +22,7 @@
 
       <% listOfRestaurants.forEach((restaurant) => { %>
         <div class="result-card-container col-lg-3 col-md-4 col-sm-6">
-          <div class="result-card card text-white bg-secondary">  
+          <div class="result-card card text-white">  
             <p><%= restaurant.name %></p>
             <img class="image" src="<%= restaurant.image_url %>" alt="Restaurant Image"></img>
             <p><%= restaurant.location["display_address"] %></p>
@@ -37,15 +37,6 @@
 </body>
 
 <style>
-
-/* body { background:
-radial-gradient(black 15%, transparent 16%) 0 0,
-radial-gradient(black 15%, transparent 16%) 8px 8px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-background-color:#282828;
-background-size:16px 16px;
-} */
 
 .image {
   height: 150px;
@@ -71,7 +62,8 @@ background-size:16px 16px;
 }
 
 .result-card {
-  height: 100%
+  height: 100%;
+   background-color: #b19b92
 }
 
 .result-row {
