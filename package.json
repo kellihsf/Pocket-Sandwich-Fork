@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon ./bin/www",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "axios": "^0.26.1",
